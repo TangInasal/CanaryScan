@@ -72,7 +72,7 @@ def scan_office_doc(file_path):
 
 def analyze_file(file_path):
     '''This is where the magic happens. THE MAIN ANALYSIS FUNCTION'''
-    if file_path.lower().endswith(('.docx', '.xlsx', '.pptx')):
+    if file_path.lower().endswith(('.docx', '.xlsx')):
         return scan_office_doc(file_path)
     elif file_path.lower().endswith('.pdf'):
         if found_urls := process_pdf_file(file_path):
